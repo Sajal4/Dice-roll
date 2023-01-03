@@ -35,7 +35,7 @@
         width: 60%;
         height: 70vh;
         position: absolute;
-        top: 135px;
+        top: 95px;
         left: 295px;
         align-items: center;
         display: flex;
@@ -259,6 +259,174 @@
         font-size: 48px;
         font-weight: 800;
         text-align: center;
+    }
+
+    /* Mobile view upto 600px*/
+
+    @media screen and (max-width: 600px) 
+    {
+        .container{
+            width:100%;
+            height: 130vh;
+            background-image: linear-gradient(to left , gray, lightblue);
+            align-items: center;
+        }
+        .container h1{
+            color: white;
+            font-family: monospace;
+            text-align: center;
+            /* display: flex;
+            position: absolute;*/
+            left: auto; 
+            top: 10px;
+        }
+        .newgame {
+            width: 18rem;
+            height: 6vh;
+            border: 2px white solid;
+            position: absolute;
+            top: 4rem;
+            left: 15px;
+            font-weight: 800;
+            box-shadow: 3px 5px 15px black;
+            border-radius: 0.4rem;
+            text-align: center;
+            font-size: 20px;
+            background-color: aliceblue;
+            box-sizing: border-box;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+
+        .box {
+            border: 2px red solid;
+            width: 93%;
+            height: 70vh;
+            position: absolute;
+            top: 95px;
+            left: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 15px;
+        }
+
+        .right input[type="text"] {
+            width: 85%;
+            height: 6vh;
+            position: relative;
+            border: 2px white solid;
+            left: 10px;
+            top: 20px;
+            font-size: 25px;
+            font-weight: 800;
+            font-family: monospace, sans-serif;
+            text-align: center;
+            box-shadow: 5px 5px 10px grey;
+            border-radius: 50px;
+        }
+        .right input[value="Sumbit"] {
+            width: 96px;
+            height: 48px;
+            text-align: center;
+            display: block;
+            position: relative;
+            top: 70px;
+            left: 25px;
+            font-size: large;
+            font-weight: 800;
+            cursor: pointer;
+            border: 2px black solid;
+            box-shadow: 3px 5px 5px grey;
+            border-radius: 50px;
+        }
+        #firstplayerimage {
+            width: 95px;
+            position: absolute;
+            top: 200px;
+            left: 24px;
+        }
+        .left input[type="text"] {
+            width: 85%;
+            height: 6vh;
+            display: block;
+            position: relative;
+            left: 10px;
+            top: 20px;
+            text-align: center;
+            border: 2px white solid;
+            font-size: 25px;
+            font-weight: 800;
+            font-family: monospace, sans-serif, sans-serif;
+            box-shadow: 3px 5px 5px grey;
+            border-radius: 50px;
+        }
+        .left input[value="Sumbit"] {
+            width: 96px;
+            height: 48px;
+            position: relative;
+            left: 25px;
+            top: 70px;
+            font-size: large;
+            font-weight: 800;
+            text-align: center;
+            cursor: pointer;
+            border: 2px black solid;
+            border-radius: 50px;
+            box-shadow: 3px 5px 5px grey;
+        }
+        #secondplayerimage {
+            width: 95px;
+            position: absolute;
+            top: 200px;
+            left: 180px;
+        }
+        .diceroll {
+            width: 176px;
+            height: 6vh;
+            border: 2px white solid;
+            position: absolute;
+            top: 493px;
+            left: 70px;
+            font-weight: 800;
+            text-align: center;
+            font-size: 25px;
+            box-shadow: 3px 5px 15px black;
+            border-radius: 50px;
+            background-color: white;
+            box-sizing: border-box;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .result {
+            width: 175px;
+            height: 6vh;
+            border: 2px white solid;
+            position: absolute;
+            top: 500px;
+            left: 80px;
+            font-weight: 800;
+            text-align: center;
+            font-size: 25px;
+            box-shadow: 3px 5px 15px black;
+            border-radius: 50px;
+            background-color: white;
+            box-sizing: border-box;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+        .winner {
+            width: 50%;
+            height: 48px;
+            border-radius: 2px;
+            color: white;
+            position: absolute;
+            top: 240px;
+            left: 40px;
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+        }
     }
 
 </style>
