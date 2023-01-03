@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        background-image: linear-gradient( gray, lightblue);
+    }
+
+    .container h1{
+        top: 10px;
+        left: 530px;
+        color: white;
+        font-family: monospace, sans-serif, sans-serif;
+        text-align: center;
+        display: flex;
+        position: absolute;
+    }
+
+    .box{
+        border: 2px red solid;
+        width: 60%;
+        height: 70vh;
+        position: absolute;
+        top: 135px;
+        left: 295px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+    }
+
+    /* Fist player */
+
+    .right{
+        width: 48%;
+        height: 60vh;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px black;
+        background-image:radial-gradient(pink,lightgray)
+    }
+
+    .right input[type="text"]{
+        width: 80%;
+        height: 6vh;
+        position: relative;
+        border: 2px white solid;
+        left: 40px;
+        top: 10px;
+        font-size: 25px;
+        font-weight: 800;
+        font-family: monospace, sans-serif;
+        text-align: center;
+        box-shadow: 5px 5px 10px gray;
+        border-radius: 50px;
+    }
+
+    .right input[value="Sumbit"]{
+        width: 96px;
+        height: 48px;
+        text-align: center;
+        display: block;
+        position: relative;
+        top: 24px;
+        left: 160px;
+        font-size: large;
+        font-weight: 800;
+        cursor: pointer;
+        border: 2px black solid;
+        box-shadow: 3px 5px 5px gray;
+        border-radius: 50px;
+    }
+
+    #firstplayerh{
+        top: 30px;
+        left: 15px;
+        text-align: center;
+        color: skyblue;
+        font-size: 45px;
+        font-weight: 900;
+        font-family: monospace, sans-serif, sans-serif;
+        position: relative;
+    }
+
+    #firstplayerimage{
+        width: 160px;
+        position: sticky;
+        top: 300px;
+        left: 410px;
+    }
+
+    ::placeholder{
+        color: Red;
+        font-weight: 800;
+    }
+
+    /* Second Player */
+
+    .left{
+        width: 48%;
+        height: 60vh;
+        margin-top: 30px;
+        box-shadow: 4px 4px 4px black;
+        border-radius: 10px;
+        background-image:radial-gradient(pink,lightgray)
+    }
+
+    .left input[type="text"]{
+        width: 80%;
+        height: 6vh;
+        display: block;
+        position: relative;
+        left: 40px;
+        top: 10px;
+        text-align: center;
+        border: 2px white solid;
+        font-size: 25px;
+        font-weight: 800;
+        font-family: monospace, sans-serif, sans-serif;
+        box-shadow: 3px 5px 5px gray;
+        border-radius: 50px;
+    }
+
+    .left input[value="Sumbit"]{
+        width: 96px;
+        height: 48px;
+        position: relative;
+        left: 160px;
+        top: 24px;
+        font-size: large;
+        font-weight: 800;
+        text-align: center;
+        cursor: pointer;
+        border: 2px black solid;
+        border-radius: 50px;
+        box-shadow: 3px 5px 5px gray;
+    }
+
+    #secondplayerh{
+        color: skyblue;
+        font-size: 45px;
+        font-weight: 900;
+        font-family: monospace, sans-serif, sans-serif;
+        position: relative;
+        top: 30px;
+        left: 15px;
+    }
+
+    .dicevalueone{
+        color: white;
+    }
+
+    .dicevaluetwo{
+        color: white;
+        width: 240px;
+        height: 48px;
+        z-index: 3;
+    }
+    #secondplayerimage{
+        width: 160px;
+        position: sticky;
+        top: 304px;
+        left: 850px;
+    }
+
+    /* Diceroll */
+
+    .diceroll{
+        width: 176px;
+        height: 6vh;
+        border: 2px white solid;
+        position: absolute;
+        top: 576px;
+        left: 640px;
+        font-weight: 800;
+        text-align: center;
+        font-size: 25px;
+        box-shadow: 3px 5px 15px black;
+        border-radius: 50px;
+        background-color: white;
+        box-sizing: border-box;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+
+    /* Result */
+
+    .result{
+        width: 176px;
+        height: 6vh;
+        border: 2px white solid;
+        position: absolute;
+        top: 576px;
+        left: 640px;
+        font-weight: 800;
+        text-align: center;
+        font-size: 25px;
+        box-shadow: 3px 5px 15px black;
+        border-radius: 50px;
+        background-color: white;
+        box-sizing: border-box;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+
+    /* Reset */
+
+    .newgame{
+        width: 320px;
+        height: 6vh;
+        border: 2px white solid;
+        position: absolute;
+        top: 64px;
+        left: 560px;
+        font-weight: 800;
+        box-shadow: 3px 5px 15px black;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 25px;
+        background-color: white;
+        box-sizing: border-box;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+
+    /* Footer Rule */
+
+    .rule{
+        position: relative;
+        top: 560px;
+        left: 0px;
+        color: white;
+    }
+
+    /* Winner */
+
+    .winner{
+        width: 50%;
+        height: 48px;
+        border-radius: 2px;
+        color: white;
+        position: absolute;
+        top: 272px;
+        left: 400px;
+        font-size: 48px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+</style>
+
+    <div class="container">
+        <h1>Two Player Dice Game</h1>
+
+        <!-- First Player Div -->
+        <div class="box" id="box">
+            <div class="right">
+                <input type="text"
+                    id="firstplayer"
+                    placeholder="First Player Name">
+                <input type="button" 
+                    value="Sumbit" 
+                    id="one" 
+                    onclick="firstplayer()">
+
+                <h1 id="firstplayerh"></h1>
+                <div class="dicevalueone"></div>
+                <img id="firstplayerimage" >
+            </div>
+
+            <!-- Second Player Div -->
+            <div class="left">
+                <input type="text" 
+                    id="secondplayer" 
+                    placeholder="Second Player Name">
+
+                <input type="button" 
+                    value="Sumbit" 
+                    id="two" 
+                    onclick="secondplayer()">
+                
+                <h1 id="secondplayerh"></h1>
+                <div class="dicevaluetwo"></div>
+                <img id="secondplayerimage" >
+            </div>
+        </div>
+
+            <!-- Diceroll + Result Div -->
+        <div class="diceroll" id="diroll" onclick="diceroll()">Roll The Dice</div>
+        <div class="result" id="result" onclick="result()">Result</div>
+
+            <!-- Reset Div -->
+        <div class="newgame" onclick="newgame()">Reset Game/Play Again</div>
+        <div class="winner" id="win"> </div>
+        
+        <div class="rule" id="displayrule">
+            <h3>How To Play</h3>
+            <p>Step-1. Enter First Player Name, And click on Submit</p>
+            <p>Step-2. Enter Second Player Name, And click on Submit</p>
+            <p>Step-3. After Submit the Second Player Name, Now You Can Start The Game, (Roll The Dice).</p>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
